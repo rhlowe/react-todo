@@ -1,0 +1,39 @@
+.list-section {
+  margin: 0 0 1rem;
+}
+
+.list-details summary {
+  border: 1px solid var(--space_cadet);
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  cursor: pointer;
+  display: block;
+  padding: .5rem;
+  position: relative;
+}
+
+.darkmode .list-details summary {
+  border-color: var(--linen);
+}
+
+.list-details summary::after {
+  content: "◀";
+  position: absolute;
+  right: 1rem;
+  transform: rotate(-90deg);
+  transition: transform 70ms;
+}
+
+.list-details:not([open]) summary,
+.list-section.empty summary {
+  border-radius: .5rem;
+}
+
+.list-details:not([open]) summary::after {
+  transform: rotate(0deg);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
